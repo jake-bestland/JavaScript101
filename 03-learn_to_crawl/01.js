@@ -4,7 +4,6 @@
 
 
 let result;
-let result          =       78347823   *
-    843972    ;
+result  = 78347823 * 843972;
 
 console.log(result)
