@@ -22,4 +22,29 @@
  */
 
 let result = 0
-console.log("Label", result)
+let born = 1985
+let rando = 3452
+let bubba = 8375
+let luckyNumber = 7
+
+let sum = born + rando + bubba + luckyNumber
+console.log("The sum of all numbers:", sum)
+
+result = bubba - born - luckyNumber
+console.log("Subtracting born and luckyNumber from bubba:", result)
+
+result = bubba * born * rando * luckyNumber
+console.log("The result of multiplying all the numbers:", result)
+
+result = bubba / (rando - luckyNumber)
+console.log("The result of the largest number divided by the difference between the smaller ones:", result)
+
+let bornModulo = born % 7
+let randoModulo = rando % 7
+let bubbaModulo = bubba % 7
+let luckyNumberModulo = luckyNumber % 7
+
+console.log("The result of born modulo 7:", bornModulo)
+console.log("The result of rando modulo 7:", randoModulo)
+console.log("The result of bubba modulo 7:", bubbaModulo)
+console.log("The result of luckyNumber modulo 7:", luckyNumberModulo)
