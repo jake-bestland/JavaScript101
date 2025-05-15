@@ -25,3 +25,23 @@
  * support for it is not everywhere.
  */
 
+const name = "Jake"
+let greeting = "Good day to you!"
+const friend = "Sam"
+const wife = "Hannah"
+let date = "15"
+let month = "May"
+let year = "2025"
+let age = "40"
+
+greeting = "Hello " + friend
+console.log(greeting)
+
+greeting = `Hello ${wife}`
+console.log(greeting)
+
+greeting = "Hey " + friend + ", did you know it's the " + date + "th of " + month + "?"
+console.log(greeting)
+
+let sentence = `In the year ${+year + 20}, I will be ${+age + 20} years old`
+console.log(sentence)
