@@ -40,7 +40,46 @@ function getRandomNumber(){
  *
  */
 
-let randomNumber = getRandomNumber() + getRandomNumber()
+const luckyNumber = 7;
+let randomNumber = getRandomNumber();
+let age = getRandomNumber() * getRandomNumber();
+let price = 0;
+let fare = "";
 
+
+
+if (age > 65) {
+    price = 5;
+    fare = "pensioner";
+} else if (age >= 5 && age < 13) {
+    price = 2;
+    fare = "child";
+} else if (age >= 13 && age < 21) {
+    price = 4;
+    fare = "teenager";
+} else if (age >= 21 && age < 30) {
+    price = 8;
+    fare = "young person";
+} else if (age >= 30 && age < 65) {
+    price = 10;
+    fare = "adult";
+} else {
+    price = 0;
+    fare = "free"
+}
+
+let message = `At ${age} years old, you pay the ${fare} fare.  That will be ${price} dollars, please.`
+
+if (price == 0) {
+    console.log("Children under 5 are free.")
+} else if (randomNumber == luckyNumber) {
+    console.log("Lucky you! Today you get to ride free of charge.")
+} else {
+    console.log(message)
+}
+
+/* below is to check the age and to see what the random number is in order to make sure the lucky number works.
+* remove from comment block to check.
+console.log(age)
 console.log(randomNumber)
-
+*/
