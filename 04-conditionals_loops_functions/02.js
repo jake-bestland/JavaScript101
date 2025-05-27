@@ -14,3 +14,25 @@
  * find both ways!
  *
  */
+
+// #1
+for (let i = 5; i <= 1000; i = i + 5) {
+    console.log(i);
+}
+
+// #2
+for (let j = -100; j <= 100; j++) {
+    console.log(j);
+}
+
+
+// #3
+let num = 0;
+
+for (let x = 0; x < 5000; x++) {
+    num += (x % 2 === 0) ? 3 : -1;
+    console.log(num);
+}
+
+// the number you get at the end:
+console.log(num)
