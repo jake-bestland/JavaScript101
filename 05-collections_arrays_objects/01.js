@@ -17,3 +17,66 @@
  *    function that takes an array as an argument and returns the sum. Use this
  *    function to log the sum of the two arrays of odd and even numbers.
  */
+
+// #1
+let roomObjects = ["chair", "mouse", "desk", "monitor", "laptop"];
+
+// #2
+let drawer1 = ["pencil", "pen", "marker", "higlighter", "eraser"];
+let drawer2 = ["notepad", "tapemeasure", "batteries", "mints", "gum"];
+let drawer3 = ["paperclip", "staples", "rubberband", "tape", "tacs"];
+let cabinet = [drawer1, drawer2, drawer3];
+
+// #3
+console.log(cabinet[0][0], cabinet[0][3], cabinet[1][1], cabinet[1][4], cabinet[2][0], cabinet[2][2]);
+
+// #4
+let numberArray = [];
+for (let i = 1; i <= 100; i++) {numberArray.push(i)}
+console.log(numberArray)
+
+// #5
+let sum = 0;
+let x = 0;
+for (numberArray[x]; x < numberArray.length; x++) {
+    sum += numberArray[x];
+}
+console.log(sum)
+
+//#6
+function getRandomNumber(){
+    return Math.floor((Math.random() * 100) + 1);
+}
+
+let randomArray = [];
+let randomNumber = getRandomNumber();
+for (let i = 1; i <= 100; i++) {
+    randomArray.push(randomNumber);
+    randomNumber = getRandomNumber();
+}
+console.log(randomArray)
+
+// #7
+let oddArray = [];
+let evenArray = [];
+let n = 0;
+for (randomArray[n]; n < randomArray.length; n++) {
+    randomArray[n] % 2 === 0 ? evenArray.push(randomArray[n]) : oddArray.push(randomArray[n]);
+}
+console.log(oddArray)
+console.log(evenArray)
+
+// #8
+function arraySum(array) {
+    let sum = 0;
+    let x =0;
+    for (array[x]; x < array.length; x++) {
+        sum += array[x];
+    }
+    return sum;
+}
+
+console.log("odd array sum:")
+console.log(arraySum(oddArray));
+console.log("even array sum:")
+console.log(arraySum(evenArray));
