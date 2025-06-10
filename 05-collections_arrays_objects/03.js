@@ -70,3 +70,50 @@ stores =  [
     [ '4003IN', 'Target', 'IN', 'North', 'Attica' ],
     [ '4003KY', 'Target', 'KY', 'North', 'Ashland' ]
 ]
+
+// #1
+
+for (let i = 0; i < stores.length; i++) {
+    console.log(stores[i][4])
+}
+
+// #2
+for (let i = 0; i < stores.length; i++) {
+    if (stores[i][2] === "CA") {
+        console.log(stores[i][1]);
+    }
+}
+
+// #3
+let counter = 0;
+for (let i = 0; i < stores.length; i++) {
+    if (stores[i][1] === "Target") {
+        ++counter;
+    }
+}
+console.log(counter);
+
+// #4
+let numTarget = 0;
+let numApplianceDirect = 0;
+let numKMart = 0;
+let numCC = 0;
+let numBB = 0;
+for (let i = 0; i < stores.length; i++) {
+    if (stores[i][1] === "Target") {
+        ++numTarget;
+    } else if (stores[i][1] === "Appliance Direct") {
+        ++numApplianceDirect;
+    } else if (stores[i][1] === "K-Mart") {
+        ++numKMart;
+    } else if (stores[i][1] === "Circuit City") {
+        ++numCC;
+    } else if (stores[i][1] === "Best Buy") {
+        ++numBB;
+    }
+}
+console.log(`There are ${numTarget} Targets in total.`);
+console.log(`There are ${numApplianceDirect} Appliance Directs in total.`);
+console.log(`There are ${numKMart} K-Marts in total.`);
+console.log(`There are ${numCC} Circuit Citys in total.`);
+console.log(`There are ${numBB} Best Buys in total.`);
