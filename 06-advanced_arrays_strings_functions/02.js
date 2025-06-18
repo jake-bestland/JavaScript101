@@ -938,3 +938,56 @@ let expenses = [
     "Bank of America - Credit Card",
   ],
 ];
+
+
+expenses.shift()
+
+// #1
+let sum2017 = 0;
+let sum2018 = 0;
+expenses.forEach((entry) => {
+  let date = new Date(entry[0])
+  if (date.getFullYear() == 2017 && entry[3] < 0) {
+    sum2017 = sum2017 + entry[3];
+  } else if (date.getFullYear() == 2018 && entry[3] < 0) {
+    sum2018 = sum2018 + entry[3];
+  }
+});
+console.log(`The total expenses for 2017 was, $${sum2017 * -1}. The total expenses for 2018 was, $${sum2018 * -1}.`)
+
+// #2
+let sumGroceries = 0;
+expenses.forEach((entry) => {
+  if (entry[2] === "Groceries" && entry[3] < 0) {
+    sumGroceries = sumGroceries + entry[3];
+  }
+});
+console.log(`The total amount paid for groceries was, $${sumGroceries * -1}`)
+
+// #3
+let accountTypes = {}
+expenses.forEach((entry) => {
+  let accountName = entry[4];
+  accountTypes[accountName] = (accountTypes[accountName] || 0) + entry[3];
+});
+for ([accountName, amount] of Object.entries(accountTypes)) {
+  console.log(`The amount in the ${accountName} account is: $${amount}.`)
+}
+
+// #4
+let eatOutArray = [];
+expenses.forEach((entry) => {
+  if (entry[2] === "Eating Out") {
+    eatOutArray.push([entry[0], entry[1], entry[3]]);
+  }
+});
+console.log(eatOutArray)
+
+// #5
+let gearAndClothingArray = [];
+expenses.forEach((entry) => {
+  if (entry[2] === "Gear and Clothing") {
+    gearAndClothingArray.push([entry[0], entry[1], entry[3]]);
+  }
+});
+console.log(gearAndClothingArray)
