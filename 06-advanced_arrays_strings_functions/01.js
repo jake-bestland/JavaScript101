@@ -54,8 +54,7 @@ console.log(`The sum of the halfArray is ${sum}, the count is ${count}, and the 
 
 // #5
 function sumNumber(a, b) {
-    let result = a + b;
-    return result;
+    return a + b;
 }
 
 function countArray(array) {
