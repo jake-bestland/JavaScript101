@@ -1,0 +1,27 @@
+body {
+    background-color: aliceblue;
+    color:darkslategrey;
+}
+
+.main-div {
+    width: 75%;
+    float: left;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+.sidebar {
+    width: 25%;
+    float: right;
+    text-align: center;
+}
+
+footer {
+    clear: both;
+}
