@@ -16,6 +16,15 @@ h3 {
     text-decoration: underline;
 }
 
+.dark-mode {
+    background-color: darkslategrey;
+    color: aliceblue;
+}
+
+/* #theme-switch {
+
+} */
+
 .sidebar {
     width: 25%;
     float: right;
